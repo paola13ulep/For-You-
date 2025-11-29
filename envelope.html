@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Envelope + Letter</title>
+    <link rel="stylesheet" href="envelope.css">
+</head>
+<body>
+    <div class="container">
+        <div class="envelope-wrapper">
+            <div class="envelope">
+                <div class="letter">
+                    <div class="text">
+                        <strong>Hi, lover!</strong>
+                        <p>
+                            Happy birthday, loveyyy!  
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="heart"></div>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <a href="flower.html" class="nav-button">
+            Click me, lover!
+        </a>
+    </div>
+
+
+
+
+
+    <script>
+    // Envelope flap
+    const envelope = document.querySelector('.envelope-wrapper');
+    envelope.addEventListener('click', () => {
+        envelope.classList.toggle('flap');
+    });
+
+    // Flower bouquet button
+    const flowerBtn = document.getElementById('show-flower');
+    const flowerContainer = document.getElementById('flower-container');
+
+    flowerBtn.addEventListener('click', () => {
+        flowerContainer.style.display = 'block';
+        const bouquet = flowerContainer.querySelector('.bouquet');
+        setTimeout(() => {
+            bouquet.classList.add('show'); // scale up here
+        }, 50);
+    });
+</script>
+
+</body>
+</html>

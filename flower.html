@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowers for You</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #131313;
+        }
+
+        .bouquet {
+            width: 300px;
+            opacity: 0;
+            transform: scale(0.5);
+            transition: all 1s ease-out;
+        }
+
+        .bouquet.show {
+            opacity: 1;
+            transform: scale(2.5); /* upsize the flowers */
+        }
+    </style>
+</head>
+<body>
+    <img src="flower.png" alt="Bouquet" class="bouquet" id="bouquet">
+
+    <script>
+        const bouquet = document.getElementById('bouquet');
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                bouquet.classList.add('show'); // show and upsize flowers
+            }, 50);
+        });
+    </script>
+</body>
+</html>
